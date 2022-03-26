@@ -22,7 +22,7 @@ All these settings can be found by going to Caching > Configuration. Ideas are s
 1. Set the Browser Cache TTL to a higher time <br>
  It speeds up your site, does not enable easy rearranging though (you might have to clear some caches then). I personally have it set to 1 day.
 2. Enable Always Online™ (may be already enabled)<br>
-Does what it says, it "Keep your website online for visitors when your origin server is unavailable. Always Online serves limited copies of web pages to users instead of errors when your server is unreachable.". You'll have to agree to the [terms]https://www.cloudflare.com/supplemental-terms/#AOBeta), and you might as well DYR for the internet archive.
+Does what it says, it "Keep your website online for visitors when your origin server is unavailable. Always Online serves limited copies of web pages to users instead of errors when your server is unreachable.". You'll have to agree to the [terms](https://www.cloudflare.com/supplemental-terms/#AOBeta), and you might as well DYR for the internet archive.
 3. Enable Crawler hints
 It trys to help with getting your site on search engines, didnt help much for me though. You'll have to, again, agree with the [terms](https://www.cloudflare.com/supplemental-terms/#crawler-hints).
 4. Argo Tiered Cache (Under Caching > Tiered Cache)
