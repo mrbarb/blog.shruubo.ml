@@ -75,7 +75,7 @@ year: [Current Year]
 Additionally, you may choose to set the following optional variables:
 
 ```yml
-google_analytics: [Your Google Analytics tracking ID]
+google_analytics: [Is_bad_and_I_dont_use_it]
 ```
 
 ### About Page
