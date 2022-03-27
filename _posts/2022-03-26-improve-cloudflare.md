@@ -2,9 +2,9 @@
 title: How to improve your site using Cloudflare.
 published: true
 ---
-Hello to my first actuall blog post! So, probably, alot of you are using cloudflare. *I guess thats also why you read this* - well,  as you can see in this graph I found some while ago, the marketshare of cloudflare **just** as a CDN is massive.
+Hello to my first actual blog post! So, probably, a lot of you are using cloudflare. *I guess thats also why you read this* - well,  as you can see in this graph I found some while ago, the marketshare of cloudflare **just** as a CDN is massive.
 ![Cloudflare Usage](/assets/cloudflare-usage.png)
-But it not just serves as a CDN. It's functions reach from DNS, to proxying, to DDOS protecting, just to [name a few](https://www.cloudflare.com/what-is-cloudflare/). And, while it's great on the webadmin's part, there are a lot of problems on the client's side, especially if you're trying to use tor or most of the vpns. But that isn't part of this blog either, eventhough I'm probably going to mention it soon ish.
+But it not just serves as a CDN. It's functions reach from DNS, to proxying, to DDOS protecting, just to [name a few](https://www.cloudflare.com/what-is-cloudflare/). And, while it's great on the webadmin's part, there are a lot of problems on the client's side, especially if you're trying to use tor or most of the vpns. But that isn't part of this blog either, eventhough I'm probably going to mention it soon-ish.
 
 # Improve the clients experience
 Alright, so this part will vary for your thinking sometimes, but should be fine most of the time.<br>Most of this was found by just administrating some sites (in fact, i use cloudflare rn too), so it should work without any problems for almost all hosting solutions. 
@@ -28,7 +28,25 @@ It trys to help with getting your site on search engines, didnt help much for me
 4. Argo Tiered Cache (Under Caching > Tiered Cache) <br>
 Helps if you need a cdn of some kind. Havent had that much experince my self, but it basically trys to find the Server with the lowest load to serve as a CDN.
 
-**The article is unfinished as is, but the tips are still valid**
+### Easy to remember urls
+Now, this also needs proxying, like most things though, should have probably said it already but eh. Go to Rules > Page rules. Now you can redirect whole sites, like shown in the first screenshot:
+![Full page redirect](/assets/full_page_redirect.png)
+Otherwise, you can also just redirect one URL - of course, you shouldn't have a website running there, for example: example.com/cool-site would go to this site on your web server, but if you use Cloudflare's redirect for that URL, it would redirect to example.org. Anyways, that's how you do it:
+![url redirect](/assets/url_redirect.png)
+Both times, either save the draft and deploy it later, or just save & deploy. The page rules have a lot of other nice functionality, but I thought this to be the most useful one.
+### Network settings
+So, under the tab "network" there are a few useful tips for overall better client accessibility.
+1. Enabling HTTP2 
+Should be enabled by default on most web servers nowadays, but good for some extra speed regardless.
+2. Enabling HTTP3
+Enables HTTP/3 with QUIC
+I didnt actually know what quic was until now, I just enabled it. But let me give a quick explaination: It uses TCP for stability, but UDP for overall speed, and TLS 1.3 for security.
+[Or as James Kehr says](https://techcommunity.microsoft.com/t5/networking-blog/what-s-quic/ba-p/2683367):
+> QUIC uses UDP for ports and connectionless transport, then adds the resiliency of TCP, the security of TLS 1.3, sprinkles in a dash of commands and version control from protocols like SMB, and then mixes in a set of new protocol concepts and efficiencies to create something entirely unique in the protocol world.
+
+Alright, that's it for now, have a great rest of your day and try to make the web a little better. :D
+
+_If this article helped you, consider [donating](https://blog.shruubo.ml/about)._
 
 ###### Sources:
 <font size="1">
@@ -40,3 +58,5 @@ Browser Cache TTL <br>
 https://blog.cloudflare.com/tiered-cache-smart-topology/ - Argo cache <br>
 https://blog.cloudflare.com/crawler-hints-how-cloudflare-is-reducing-the-environmental-impact-of-web-searches/ - Crawler hints <br>
 https://developers.cloudflare.com/cache/about/always-online/ - Always online
+https://techcommunity.microsoft.com/t5/networking-blog/what-s-quic/ba-p/2683367 - QUIC
+</font>
