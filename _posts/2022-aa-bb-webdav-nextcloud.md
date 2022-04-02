@@ -19,7 +19,6 @@ So this obviously needs account verification, I made a second account for it, bu
 ### Moving and copying files or folders
 So yeah, I'm not sure why, but it straight up doesn't work. I don't know if it worked before, and they broke it with the new update, like with the cron jobs, or my web server is configured wrong. You may refer to the documentation for [moving](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/basic.html#moving-files-and-folders-rfc4918) or [copying](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/basic.html#moving-files-and-folders-rfc4918). I might try it again as soon as there's a new version/docker image, and update the blog if needed. 
 
-
 I hope I could still help you, and have a great rest of your day!
 
 _If this article helped you, consider [donating](https://blog.shruubo.ml/about)._
