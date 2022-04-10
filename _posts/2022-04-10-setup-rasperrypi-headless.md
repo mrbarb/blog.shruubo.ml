@@ -5,7 +5,7 @@ published: true
 
 Hello everyone! This, again, is going to be a fairly quick one, but I just wanted to have a tutorial in case I forget it again, or someone else needs it. For those not aware, the Pi foundation recently removed the default user "pi" in their latest release of Bullseye. They apparently did it to [cause less bruteforce attacks](https://www.raspberrypi.com/news/raspberry-pi-bullseye-update-april-2022/), which defently is a good sign, especially thinking about the large number of not secured pis. So I'll assume you have the latest and greatest version of the Raspberry Pi imager installed, if not, just go [here](https://www.raspberrypi.com/software/). It's really easy to install and overall a great tool.<br>
 
-So, now, having the Raspberry Pi imager installed, we need to choose an OS, and since we're running it headlessly, we can just use Raspberry Pi OS lite. Simply click on choose OS, and the Raspberry Pi OS (other).
+So, now, having the Raspberry Pi imager installed, we need to choose an OS, and since we're running it headlessly, we can just use Raspberry Pi OS lite. Simply click on choose OS, and Raspberry Pi OS (other).<br>
 ![rasp_imager](/assets/rasp_imager_home.png) <br>
 Then click onto Raspberry Pi OS Lite(32-bit). If you have a Raspberry Pi 4, you could also choose the 64-bit version, but it's a bit less stable as far as I'm concerned.
 ![choose_os](/assets/choose_rpi_os_lite_32_bit.png) <br>
